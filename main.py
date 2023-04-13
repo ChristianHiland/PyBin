@@ -1,5 +1,4 @@
-import file
-import system
+import fileinput
 import os
 import platform
 
