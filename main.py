@@ -1,6 +1,21 @@
-text = input("Text To Add to out.bin:\n\n").encode('ascii')
-map(bin,bytearray(text))
-textn = b"Type the following command to edit /etc/hostname using nano or vi text editor: sudo nano /etc/hostname.\n Delete the old name and setup new name.\n Next Edit the /etc/hosts file: sudo nano /etc/hosts. ... \nReboot the system to changes take effect: sudo reboot."
+import file
+import os
+import platform
 
-with open("out.bin", "wb") as out_file:
-  out_file.write(text)
+osPlatform = platform.system()
+print("Platform: " + osPlatform)
+
+if osPlatform == str("Linux"):
+  file.WriteFile("out.bin")
+  os.system("clear")
+  file.ReadFile("out.bin")
+elif osPlatform == str("Windows"):
+  file.WriteFile("out.bin")
+  os.system("CLS")
+  file.ReadFile("out.bin")
+elif osPlatform == str("Darwin"):
+  file.WriteFile("out.bin")
+  os.system("Clear screen")
+  file.ReadFile("out.bin")
+else:
+  print("We don't know what platform you're on.")

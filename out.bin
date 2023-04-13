@@ -1,4 +1,1 @@
-Type the following command to edit /etc/hostname using nano or vi text editor: sudo nano /etc/hostname.
- Delete the old name and setup new name.
- Next Edit the /etc/hosts file: sudo nano /etc/hosts. ... 
-Reboot the system to changes take effect: sudo reboot.
+file.ReadFile("out.bin")
